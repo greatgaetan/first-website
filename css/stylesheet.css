@@ -1,0 +1,218 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    width: 100%;
+    background-color: #fafafa;
+}
+.header {
+    position: relative;
+    color: white;
+  }
+.sticky-header {
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 50px;
+    background-color: transparent;
+    z-index: 200;
+}
+.sticky-header[data-scroll="out"] {
+    position: fixed;
+    visibility: visible;
+    background-color: #FFF;
+    transition: background-color 1s ease;
+}
+.center-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFF;
+    height: 100vh;
+    width: 100%;
+    animation: go-on-top 9s linear forwards;
+}
+@keyframes go-on-top {
+    0%, 91% {
+        height: 100vh;
+    }
+    92% {
+        height: 90vh;
+    }
+    93% {
+        height: 80vh;
+    }
+    94% {
+        height: 70vh;
+    }
+    95% {
+        height: 60vh;
+    }
+    96% {
+        height: 50vh;
+    }
+    97% {
+        height: 40vh;
+    }
+    98% {
+        height: 30vh;
+    }
+    99% {
+        height: 20vh;
+    }
+    100% {
+        top: 0;
+        height: 10vh;
+    }
+}
+.hidden {
+    position: absolute;
+    visibility: hidden;
+    letter-spacing: 10px;
+    font-size: 3em;
+    font-weight: 600;
+    animation: main-name 8s linear forwards;
+}
+@keyframes main-name {
+    0%, 99%{
+        visibility: hidden;
+    }
+    100% {
+        visibility: visible;
+    }
+}
+.words {
+    letter-spacing: 6px;
+    font-size: 2em;
+}
+.words span {
+    text-transform: uppercase;
+    overflow: hidden;
+    animation: rollwords 8s normal forwards ease-in-out;
+    opacity: 0;
+}
+@keyframes rollwords {
+    0% {
+        opacity: 0;
+        transform: translateY(-5px);
+    }
+    2% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+    18% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+    20% {
+        opacity: 0;
+        transform: translateY(5px);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(5px);
+    }
+}
+.words span:nth-child(2) {
+    animation-delay: 2s;
+}
+.words span:nth-child(3) {
+    animation-delay: 4s;
+}
+.words span:nth-child(4) {
+    animation-delay: 6s;
+}
+.skillsTitle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 60px 0;
+    font-size: 3em;
+    text-transform: uppercase;
+}
+.container-skills {
+    height: 80vh;
+}
+.skillsBox {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 80px;
+}
+.box {
+    background-color: white;
+    border-radius: 1em;
+    padding: 4em 3em;
+    margin: 0 20px 0 20px;
+    box-shadow:
+    -10px -10px 15px rgba(255, 255, 255, 0.5),
+    10px 10px 15px rgba(70,70,70,0.12);
+    height: 10em;
+}
+.percent {
+    position: relative;
+}
+
+svg {
+    height: 110px;
+    width: 110px;
+}
+svg circle {
+    fill: none;
+    stroke: #eb3b5a;
+    stroke-width: 10px;
+    transform: translate(5px, 5px);
+    stroke-linecap: round;
+    stroke-dasharray: 314;
+    stroke-dashoffset: 314;
+}
+svg circle:nth-child(1) {
+    stroke: rgb(223, 223, 223);
+    stroke-dashoffset: 0;
+}
+
+.skillsBox[data-scroll="in"] .javasvg circle:nth-child(2)  {
+    animation: circle-java 2s forwards;
+}
+.skillsBox[data-scroll="in"] .htmlsvg circle:nth-child(2)  {
+    animation: circle-html 2s forwards;
+}
+.skillsBox[data-scroll="in"] .csssvg circle:nth-child(2)  {
+    animation: circle-css 2s forwards;
+}
+@keyframes circle-java {
+    to {
+        stroke-dashoffset: 63;
+    }
+}
+
+@keyframes circle-html {
+    to {
+        stroke-dashoffset: 94;
+    }
+}
+@keyframes circle-css {
+    to {
+        stroke-dashoffset: 78;
+    }
+}
+.box span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: 400;
+    color: #eb3b5a;
+    font-size: 1.5em;
+}
+
+.box h1 {
+    text-align: center;
+    color: #eb3b5a;
+    margin-top: 20px;
+}
