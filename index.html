@@ -1,102 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Gaëtan Didderen</title>
-    <link rel="stylesheet" href="css/stylesheet.css" />
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-    <script src="jquery-3.5.1.js"></script>
-    <script src="scroll-out.js"></script>
-  </head>
-  <body>
-    <div class="header">
-      <div class="sticky-header">
-        <span>about</span>
-        <a href="#skills">skills</a>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gaëtan Didderen</title>
+  <link rel="stylesheet" href="css/stylesheet.css" />
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <script src="jquery-3.5.1.js"></script>
+  <script src="scroll-out.js"></script>
+</head>
+
+<body>
+  <div class="header">
+    <div class="sticky-header">
+      <a href="#skills">skills</a>
+      <a href="#skills">skills</a>
+      <a href="#skills">skills</a>
+      <a href="#skills">skills</a>
+      <a href="#skills">skills</a>
+    </div>
+  </div>
+    <div class="center-content">
+      <div id="words" class="words">
+        <span>web developer</span>
+        <span>IT student</span>
+        <span>software developer</span>
+        <span>IT analyst</span>
+      </div>
+      <div class="hidden">GAETAN DIDDEREN</div>
+    </div>
+  <section class="section-skills">
+    <div class="leftSection">
+      <h1 class="skillsTitle text-shadow title" id="skills">skills</h1>
+      <p class="justify-text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda vel odit nesciunt, sapiente placeat sed
+        deserunt. Et reiciendis tempora totam est quasi non quidem illum, veniam blanditiis voluptate ipsa aliquam.</p>
+    </div>
+    <div class="container-skills">
+      <div class="skillsBox">
+        <div class="box">
+          <div class="percent">
+            <svg class="javasvg">
+              <circle cx="50px" cy="50px" r="50px"></circle>
+              <circle cx="50px" cy="50px" r="50px"></circle>
+            </svg>
+            <span class="javapercent">80%</span>
+          </div>
+          <h1>JAVA</h1>
+        </div>
+        <div class="box">
+          <div class="percent">
+            <svg class="htmlsvg">
+              <circle cx="50px" cy="50px" r="50px"></circle>
+              <circle cx="50px" cy="50px" r="50px"></circle>
+            </svg>
+            <span class="javapercent">70%</span>
+          </div>
+          <h1>HTML</h1>
+        </div>
+        <div class="box">
+          <div class="percent">
+            <svg class="csssvg">
+              <circle cx="50px" cy="50px" r="50px"></circle>
+              <circle cx="50px" cy="50px" r="50px"></circle>
+            </svg>
+            <span class="javapercent">75%</span>
+          </div>
+          <h1>CSS</h1>
+        </div>
       </div>
     </div>
-    <div class="main">
-      <div class="relative">
-        <div class="center-content">
-           <div class="words">
-               <span>web developer</span>
-               <span>IT student</span>
-               <span>software developer</span>
-               <span>IT analyst</span>
-           </div>
-           <div class="hidden">GAETAN DIDDEREN</div>
-        </div>
-    </div>
-      <h1 class="skillsTitle" id="skills">skills</div>
-      <div class="container-skills">
-        <div class="skillsBox">
-          <div class="box">
-            <div class="percent">
-              <svg class="javasvg">
-                <circle cx="50px" cy="50px" r="50px"></circle>
-                <circle cx="50px" cy="50px" r="50px"></circle>
-              </svg>
-              <span class="javapercent">80%</span>
-            </div>
-            <h1>JAVA</h1>
-          </div>
-          <div class="box">
-            <div class="percent">
-              <svg class="htmlsvg">
-                <circle cx="50px" cy="50px" r="50px"></circle>
-                <circle cx="50px" cy="50px" r="50px"></circle>
-              </svg>
-              <span class="javapercent">70%</span>
-            </div>
-            <h1>HTML</h1>
-          </div>
-          <div class="box">
-            <div class="percent">
-              <svg class="csssvg">
-                <circle cx="50px" cy="50px" r="50px"></circle>
-                <circle cx="50px" cy="50px" r="50px"></circle>
-              </svg>
-              <span class="javapercent">75%</span>
-            </div>
-            <h1>CSS</h1>
-          </div>
-        </div>
-      </div>
-    </div>
-    <script>
-      ScrollOut({
-        targets: 'h1, .skillsBox, .sticky-header'
-      });
-    </script>
-    <script language="JavaScript" type="text/javascript">
-      $(window).on('load', function() {
-        disableScroll();
-        enableScroll();
-      });
-      $(document).ready(function(){
-        $(this).scrollTop(0);
-      });
-      function disableScroll() {
-         
-        // Get the current page scroll position 
-        scrollTop = window.pageYOffset || document.documentElement.scrollTop; 
-        scrollLeft = window.pageXOffset || document.documentElement.scrollLeft, 
-      
-        // if any scroll is attempted, set this to the previous value 
-        window.onscroll = function() { 
-            window.scrollTo(scrollLeft, scrollTop); 
-        }; 
-      }   
-      function enableScroll() { 
-        setTimeout(
-          function() {
-              window.onscroll = function() {}; 
-              //scroll 1px to trigger animations on launch page
-              window.scroll(0,1);
-            }, 9000)
+  </section>
+
+  <script>
+    ScrollOut({
+      targets: 'h1, .skillsBox, .sticky-header'
+    });
+  </script>
+  <script language="JavaScript" type="text/javascript">
+    $(window).on('beforeunload', function () {
+      $(window).scrollTop(0);
+    });
+
+    $(window).on('load', function () {
+      $("body").css("font-size",Math.max($(window).width()/100,8)+"px")
+      vanishWords();
+      scollOneDown();
+    });
+
+    function vanishWords() {
+      setTimeout(
+        function () {
+          $("#words").hide(1000);
+        }, 4000)
+    }
+
+    function scollOneDown() {
+      setTimeout(
+        function () {
+          window.onscroll = function () { };
+          //scroll 1px to trigger animations on launch page
+          if (window.scrollY == 0) {
+            window.scroll(0, 1);
           }
-    </script>
-  </body>
+        }, 6500);
+    }
+  </script>
+</body>
+
 </html>
